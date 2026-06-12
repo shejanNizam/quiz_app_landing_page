@@ -34,7 +34,7 @@ const benefits = [
 
 export default function StatsSection() {
   return (
-    <section className="bg-dark px-4 py-16 sm:px-6">
+    <section className="bg-black px-4 py-16 sm:px-6">
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 text-left md:grid-cols-3">
         <div className="flex justify-center md:justify-start">
           <Image
