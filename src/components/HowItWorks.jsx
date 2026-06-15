@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import phone from "../assets/images/single_phone_image.png";
 
 const steps = [
@@ -29,38 +31,73 @@ const steps = [
   },
 ];
 
+const container = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12 } },
+};
+
+const stepVariant = {
+  hidden: { opacity: 0, x: 40 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.55, ease: "easeOut" } },
+};
+
 export default function HowItWorks() {
   return (
     <section className="bg-dark px-4 py-20 sm:px-6">
       <div className="mx-auto max-w-6xl">
-        <h2 className="mb-14 text-center text-3xl font-bold text-white sm:text-4xl">
+        <motion.h2
+          className="mb-14 text-center text-3xl font-bold text-white sm:text-4xl"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.55, ease: "easeOut" }}
+        >
           How it works
-        </h2>
+        </motion.h2>
 
         <div className="flex flex-col items-center gap-12 lg:flex-row">
-          <div className="flex w-full justify-center lg:w-2/5">
-            <Image
-              src={phone}
-              alt="NAILEDit app screen"
-              className="w-64 max-w-full sm:w-72"
-            />
-          </div>
+          <motion.div
+            className="flex w-full justify-center lg:w-2/5"
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
+            <div className="animate-float">
+              <Image
+                src={phone}
+                alt="NAILEDit app screen"
+                className="w-64 max-w-full drop-shadow-[0_20px_56px_rgba(179,241,53,0.15)] sm:w-72"
+              />
+            </div>
+          </motion.div>
 
-          <div className="w-full space-y-4 text-left lg:w-3/5">
-            {steps.map((step) => (
-              <div
+          <motion.div
+            className="w-full space-y-4 text-left lg:w-3/5"
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+          >
+            {steps.map((step, i) => (
+              <motion.div
                 key={step.title}
-                className="rounded-2xl border border-gray-600 px-6 py-4 transition hover:border-primary"
+                variants={stepVariant}
+                whileHover={{ borderColor: "#b3f135", x: 4 }}
+                className="flex gap-4 rounded-2xl border border-gray-700 px-6 py-4 transition-colors duration-300 cursor-default"
               >
-                <h3 className="mb-1.5 font-semibold text-white">
-                  {step.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-gray-400">
-                  {step.description}
-                </p>
-              </div>
+                <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/15 text-xs font-bold text-primary">
+                  {i + 1}
+                </span>
+                <div>
+                  <h3 className="mb-1.5 font-semibold text-white">{step.title}</h3>
+                  <p className="text-sm leading-relaxed text-gray-400">
+                    {step.description}
+                  </p>
+                </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
