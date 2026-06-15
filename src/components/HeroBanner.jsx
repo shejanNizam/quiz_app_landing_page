@@ -14,7 +14,7 @@ const avatars = [
 
 export default function HeroBanner() {
   return (
-    <section className="px-4 py-6 sm:px-6">
+    <section className="bg-black px-4 py-6 sm:px-6">
       <div className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl">
         <Image src={bannerBg} alt="" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-black/40" />
@@ -43,7 +43,9 @@ export default function HeroBanner() {
               </div>
 
               <Link
-                href="/signup"
+                href="https://play.google.com/store"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-3 rounded-full border border-primary px-6 py-3 text-sm font-medium text-white transition hover:bg-primary hover:text-black"
               >
                 Lets get started
