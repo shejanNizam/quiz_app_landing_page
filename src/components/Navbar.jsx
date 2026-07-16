@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import logo from "../assets/images/main_logo_image.png";
+import logo from "../assets/images/main_logo_image.jpeg";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);

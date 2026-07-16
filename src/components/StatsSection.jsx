@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import logo from "../assets/images/main_logo_image.png";
+import logo from "../assets/images/main_logo_image.jpeg";
 
 const stats = [
   {

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../assets/images/main_logo_image.png";
+import logo from "../../assets/images/main_logo_image.jpeg";
 
 export default function AuthShell({ children }) {
   return (

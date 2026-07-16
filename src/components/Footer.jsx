@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaXTwitter } from "react-icons/fa6";
-import { MdMailOutline, MdPhone } from "react-icons/md";
-import logo from "../assets/images/main_logo_image.png";
+import { MdLocationOn, MdMailOutline, MdPhone } from "react-icons/md";
+import logo from "../assets/images/main_logo_image.jpeg";
 
 const unityPages = [
   { label: "About Us", href: "/about" },
@@ -115,24 +115,37 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="mailto:abc@gmail.com"
+                  href="mailto:info@naileditexamprep.com"
                   className="group flex items-center gap-3 text-sm text-gray-400 transition-colors duration-200 hover:text-white"
                 >
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-primary transition-colors duration-200 group-hover:border-primary/50 group-hover:bg-primary/10">
                     <MdMailOutline size={16} />
                   </span>
-                  abc@gmail.com
+                  info@naileditexamprep.com
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+00956567890"
+                  href="tel:+19368668342"
                   className="group flex items-center gap-3 text-sm text-gray-400 transition-colors duration-200 hover:text-white"
                 >
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-primary transition-colors duration-200 group-hover:border-primary/50 group-hover:bg-primary/10">
                     <MdPhone size={16} />
                   </span>
-                  (009) 565-67890
+                  1-936-866-8342
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://maps.google.com/?q=Indianola, MS 38751"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-3 text-sm text-gray-400 transition-colors duration-200 hover:text-white"
+                >
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-primary transition-colors duration-200 group-hover:border-primary/50 group-hover:bg-primary/10">
+                    <MdLocationOn size={16} />
+                  </span>
+                  Indianola, MS 38751
                 </a>
               </li>
             </ul>
