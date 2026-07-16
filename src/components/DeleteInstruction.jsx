@@ -17,31 +17,25 @@ const steps = [
     alt: "Profile tab highlighted in the bottom navigation bar",
   },
   {
-    title: "Go to Settings",
-    description: "On the Profile screen, tap Settings.",
+    title: "Go to Settings and tap Delete Account",
+    description:
+      "On the Profile screen, tap Settings. Scroll to the bottom of the Settings page and tap the Delete Account button.",
     image: stepTwo,
     alt: "Settings option highlighted on the Profile screen",
   },
   {
-    title: "Tap Delete Account",
+    title: "Confirm with your password",
     description:
-      "Scroll to the bottom of the Settings page and tap the Delete Account button.",
+      "The Delete Account screen opens. Enter your account password to confirm it is really you, then tap Delete.",
     image: stepThree,
-    alt: "Delete Account button at the bottom of the Settings page",
+    alt: "Delete Account screen with a password field and a Delete button",
   },
   {
-    title: "Review the warning",
+    title: "Review the warning and confirm",
     description:
-      "A confirmation dialog will appear. Review the warning that deleting your account is permanent and cannot be undone.",
+      "A confirmation dialog will appear. Review the warning that deleting your account is permanent and cannot be undone. Tap Delete to permanently delete your account, or tap Cancel to keep your account and return to the Settings screen.",
     image: stepFour,
     alt: "Delete Account confirmation dialog with a permanent-action warning",
-  },
-  {
-    title: "Confirm or cancel",
-    description:
-      "Tap Delete to permanently delete your account, or tap Cancel to keep your account and return to the Settings screen.",
-    image: null,
-    alt: "",
   },
 ];
 
@@ -74,7 +68,8 @@ export default function DeleteInstruction() {
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-gray-300 sm:text-base">
             Follow the steps below to permanently delete your NAILEDit! account
-            and all associated data directly from within the app.
+            and all associated data directly from within the app. You will need
+            your account password to confirm the deletion.
           </p>
         </motion.div>
       </section>
