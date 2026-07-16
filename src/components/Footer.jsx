@@ -6,6 +6,7 @@ import { FaFacebookF, FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { MdLocationOn, MdMailOutline, MdPhone } from "react-icons/md";
 import logo from "../assets/images/main_logo_image.jpeg";
 
+
 const unityPages = [
   { label: "About Us", href: "/about" },
   { label: "Privacy Policy", href: "/privacy" },

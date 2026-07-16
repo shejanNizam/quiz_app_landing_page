@@ -7,7 +7,7 @@ export const metadata = {
 export default function Terms() {
   return (
     <PolicyPage
-      contentKey="terms_and_conditions"
+      slug="terms-and-conditions"
       fallbackTitle="Terms and condition"
     />
   );

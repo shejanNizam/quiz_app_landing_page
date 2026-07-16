@@ -5,5 +5,5 @@ export const metadata = {
 };
 
 export default function About() {
-  return <PolicyPage contentKey="about_us" fallbackTitle="About us" />;
+  return <PolicyPage slug="about-us" fallbackTitle="About us" />;
 }

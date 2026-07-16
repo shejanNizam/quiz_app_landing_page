@@ -6,6 +6,6 @@ export const metadata = {
 
 export default function Privacy() {
   return (
-    <PolicyPage contentKey="privacy_policy" fallbackTitle="Privacy policy." />
+    <PolicyPage slug="privacy-policy" fallbackTitle="Privacy policy." />
   );
 }
